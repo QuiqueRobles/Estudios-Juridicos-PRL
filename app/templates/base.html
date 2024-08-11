@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="/static/img/favicon.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/banner.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+</head>
+
+<body>
+    <!-- Sticky Navbar with Transparent Background -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container d-flex align-items-center">
+            <a href="{{ url_for('index') }}" class="d-flex align-items-center">
+                <img src="{{ url_for('static', filename='img/favicon.jpeg') }}" alt="Logo" class="navbar-logo">
+                <span class="navbar-brand font-weight-bold ml-2">PRL Estudio Jurídico</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer with Dark Theme and Improved Layout -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="footer-links mb-3">
+                <a href="{{ url_for('index') }}" class="text-white">Inicio</a> |
+                <a href="#sobre-mi" class="text-white">Sobre mí</a> |
+                <a href="#servicios" class="text-white">Servicios</a> |
+                <a href="#contacto" class="text-white">Contacto</a>
+            </div>
+            <p>Contacto: <a href="tel:+34915860646" class="text-white">+34 915 860 646</a> | <a
+                    href="mailto:pedro.robles@juridico.com" class="text-white">pedro.robles@juridico.com</a></p>
+            <p>&copy; 2023 PRL Estudio Jurídico - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+   
+    <script>
+        $(document).ready(function () {
+            // Add class 'appear' to hero banner on page load
+            $('.hero').addClass('appear');
+
+            // Navbar background toggle on scroll
+            $(window).on('scroll', function () {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 100) {
+                    $('.navbar').addClass('bg-dark');
+                } else {
+                    $('.navbar').removeClass('bg-dark');
+                }
+
+                // Appear effect for sections on scroll
+                $('.appear-on-scroll').each(function () {
+                    var elementTop = $(this).offset().top;
+                    var viewportBottom = $(window).scrollTop() + $(window).height();
+
+                    if (elementTop < viewportBottom - 100) {
+                        $(this).addClass('appear');
+                    } else {
+                        $(this).removeClass('appear');
+                    }
+                });
+            });
+
+            // Trigger the scroll event on page load to check the initial position
+            $(window).trigger('scroll');
+        });
+    </script>
+
+</body>
+
+</html>

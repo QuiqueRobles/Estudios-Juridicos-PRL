@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section with Full-Width Background Image -->
+<header class="wrapper" style="background-image: url('{{ url_for('static', filename='img/banner-bg.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="neon-lines"></div>
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="h1--scalingSize" data-text="Pedro Robles Latorre"
+                style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Pedro Robles Latorre</h1>
+            <p class="lead">Consultor Jurídico Especializado en Herencias y Sucesiones</p>
+
+            <!-- Cards Container with Hover Effects -->
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios de Herencias</h5>
+                        <p class="card-text">Conoce más sobre nuestros servicios especializados en herencias.</p>
+                        <a href="#servicios" class="btn btn-primary">Ver Herencias</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicios de Particiones</h5>
+                        <p class="card-text">Descubre cómo podemos ayudarte con la partición de bienes.</p>
+                        <a href="#servicios" class="btn btn-primary">Ver Particiones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content with Equal Height Columns -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Professional Overview Section -->
+        <div class="col-12">
+            <div class="row">
+                <!-- Professional Photo Section -->
+                <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                    <div class="photo-container position-relative">
+                        <img src="{{ url_for('static', filename='img/pedro-robles.png') }}" alt="Pedro Robles Latorre"
+                            class="img-fluid rounded-circle shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
+                        <div class="photo-overlay">Pedro Robles Latorre</div>
+                    </div>
+                </div>
+        
+                <!-- Professional Details Section -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="professional-details">
+                        <h2 class="display-4 font-weight-bold text-primary">Pedro Robles Latorre</h2>
+                        <p class="text-muted">Consultor Jurídico desde 2023</p>
+                        <p><i class="fas fa-map-marker-alt text-primary"></i> Madrid</p>
+                        <p>Colegiado n.º 15906 del Ilustre Colegio de Abogados de Valencia</p>
+                        <p><a href="tel:+34915860646" class="text-primary"><i class="fas fa-phone"></i> +34 915 860 646</a></p>
+                        <p><a href="mailto:pedro.robles@juridico.com" class="text-primary"><i class="fas fa-envelope"></i>
+                                pedro.robles@juridico.com</a></p>
+                        <a href="{{ url_for('static', filename='docs/cv_pedro_robles.pdf') }}"
+                            class="btn btn-outline-primary my-3"><i class="fas fa-file-pdf"></i> Descargar CV (PDF)</a>
+                        <div class="mt-4">
+                            <h4 class="font-weight-bold text-primary">Principales Áreas de Práctica</h4>
+                            <p class="mb-2">Herencias y Sucesiones</p>
+                            <h4 class="font-weight-bold text-primary">Idiomas</h4>
+                            <p class="mb-0">Español, Inglés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+            <!-- Professional Timeline Section -->
+            <div id="timeline" class="my-5 appear-on-scroll">
+                <h2 class="" style="color:#8f5442;">Experiencia Profesional</h2>
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">PRL Estudio Jurídico</h4>
+                            <p class="text-muted">Fundador y Consultor Jurídico | 2023 - Actualidad</p>
+                            <p>Fundé PRL Estudio Jurídico para ofrecer servicios especializados en herencias y sucesiones.
+                                Lidero un equipo dedicado a proporcionar asesoramiento legal personalizado a nuestros clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Bufete López & Asociados</h4>
+                            <p class="text-muted">Abogado Especialista en Sucesiones | 2016 - 2023</p>
+                            <p>Trabajé en casos complejos de herencias, particiones de bienes, y resolución de conflictos
+                                familiares. Desarrollé estrategias legales efectivas para la planificación sucesoria.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4 class="timeline-title">Abogados Martínez y Asociados</h4>
+                            <p class="text-muted">Asociado Junior | 2010 - 2016</p>
+                            <p>Comencé mi carrera profesional como abogado junior, especializándome en derecho de sucesiones.
+                                Colaboré en casos de planificación patrimonial y asesoría legal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sobre mí -->
+            <div id="sobre-mi" class="my-5 appear-on-scroll">
+                <h2>Sobre mí</h2>
+                <p>Hola, soy Pedro Robles Latorre, consultor jurídico especializado en herencias y sucesiones con una
+                    sólida
+                    trayectoria en el ámbito legal. Con una formación académica en Derecho y una extensa experiencia en
+                    el sector,
+                    me dedico a brindar asesoramiento y soluciones efectivas para la gestión y resolución de temas
+                    relacionados con
+                    la herencia.</p>
+
+                <p>Mi carrera profesional comenzó en 2010 tras obtener mi licenciatura en Derecho en la Universidad de
+                    Valencia.
+                    Desde entonces, he trabajado en diversos bufetes de abogados y he colaborado en casos complejos de
+                    sucesión y
+                    partición de bienes. En 2023, decidí fundar PRL Estudio Jurídico para ofrecer un servicio más
+                    personalizado y
+                    especializado a mis clientes.</p>
+
+                <p>A lo largo de mi carrera, he gestionado con éxito numerosos casos de herencias, incluyendo la
+                    resolución de
+                    conflictos familiares, la planificación sucesoria y la administración de patrimonios. Mi enfoque
+                    está en ofrecer
+                    un asesoramiento claro y detallado, garantizando que cada cliente reciba una solución adaptada a sus
+                    necesidades
+                    y circunstancias particulares.</p>
+
+                <p>En mi tiempo libre, me gusta estar al tanto de las últimas novedades en el ámbito legal y participar
+                    en
+                    seminarios y conferencias relacionadas con el derecho de sucesiones. Mi objetivo es seguir creciendo
+                    profesionalmente y proporcionar un servicio de la más alta calidad a cada uno de mis clientes.</p>
+            </div>
+
+            <!-- Updated Services Section -->
+            <div id="servicios" class="my-5 appear-on-scroll">
+                <h2>Servicios</h2>
+                <p>En PRL Estudio Jurídico, ofrecemos una gama completa de servicios legales especializados en herencias
+                    y particiones.
+                    Nuestro objetivo es proporcionar asesoramiento y asistencia integral en cada etapa del proceso
+                    sucesorio, asegurando
+                    una gestión eficiente y efectiva de los asuntos hereditarios.</p>
+
+                <!-- Interactive Cards for Services -->
+                <div class="row">
+                    <!-- Card 1: Herencias -->
+                    <div class="col-md-6">
+                        <div class="card interactive-card">
+                            <img src="{{ url_for('static', filename='img/herencias.jpg') }}" class="card-img-top"
+                                alt="Servicios de Herencias">
+                            <div class="card-body">
+                                <h3 class="card-title">Asesoramiento en Herencias</h3>
+                                <p class="card-text">Ofrecemos asesoramiento experto en la planificación y gestión de
+                                    herencias, ayudando a nuestros clientes a preparar testamentos, establecer
+                                    fideicomisos y planificar la sucesión de manera estratégica.</p>
+                                <a href="{{ url_for('herencias_form') }}" class="btn btn-primary">Solicitar
+                                    Asesoramiento</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Particiones -->
+                    <div class="col-md-6">
+                        <div class="card interactive-card">
+                            <img src="" class="card-img-top"
+                                alt="Servicios de Particiones">
+                            <div class="card-body">
+                                <h3 class="card-title">Gestión de Particiones</h3>
+                                <p class="card-text">Gestionamos el proceso de partición de bienes, asegurando una
+                                    división equitativa y justa de los activos entre los herederos.</p>
+                                <a href="{{ url_for('particiones_form') }}" class="btn btn-primary">Solicitar Gestión de
+                                    Partición</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contacto" class="my-5 appear-on-scroll">
+                <h2>Contacto</h2>
+                <p>Formulario de contacto o información adicional...</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

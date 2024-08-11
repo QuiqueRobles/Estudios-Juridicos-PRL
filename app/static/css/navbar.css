@@ -1,0 +1,79 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #111;
+    /* Fondo oscuro */
+    border-bottom: 2px solid #444;
+    /* Línea inferior para separación */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    /* Sombra suave para mayor profundidad */
+    transition: background-color 0.3s ease;
+    /* Transición suave al cambiar el fondo */
+}
+.navbar-logo {
+    max-height: 40px;
+    /* Adjust according to your design */
+    width: auto;
+}
+
+.navbar-brand span {
+    margin-left: 10px;
+    /* Space between logo and text */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ccc !important;
+    /* Cambio de color suave al pasar el cursor */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ddd;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo semitransparente en hover */
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2888, 88, 88, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Responsive: Navbar Background on Scroll */
+@media (max-width: 768px) {
+    .navbar {
+        background-color: #000;
+        /* Fondo más oscuro en móviles */
+    }
+}
+
+/* Smooth Scroll Effect for Navbar Links */
+html {
+    scroll-behavior: smooth;
+}

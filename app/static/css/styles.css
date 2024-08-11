@@ -1,0 +1,210 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #ECF0F1; /* Fondo general de la página */
+    color: #34495E;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar y Encabezado */
+.header {
+    background-color: #2C3E50; /* Fondo del encabezado principal */
+    color: #ffffff;
+}
+
+/* Fondo de la sección de Héroe (Hero Section) */
+.wrapper {
+    background-color: #2C3E50; /* Color de fondo que complementa la imagen */
+}
+
+/* Fondo de la sección "Sobre mí" */
+#sobre-mi {
+    background-color: #BDC3C7; /* Fondo gris claro para un look profesional */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Fondo de la sección "Servicios" */
+#servicios {
+    background-color: #34495E; /* Fondo oscuro que resalta los servicios */
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Fondo de la sección "Contacto" */
+#contacto {
+    background-color: #BDC3C7; /* Fondo gris claro */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Estilos de las tarjetas interactivas de servicios */
+.interactive-card {
+    background-color: #ECF0F1; /* Fondo claro para destacar sobre el fondo oscuro */
+    border: 1px solid #2C3E50;
+    transition: transform 0.3s ease-in-out;
+}
+
+.interactive-card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    color: #2C3E50; /* Título de la tarjeta en azul marino oscuro */
+}
+
+.card-body p {
+    color: #fdfeff; /* Texto de la tarjeta en azul grisáceo */
+}
+
+.btn-primary {
+    background-color: #E74C3C; /* Botón rojo coral */
+    border-color: #E74C3C;
+}
+
+.btn-primary:hover {
+    background-color: #C0392B; /* Oscurecer botón en hover */
+    border-color: #C0392B;
+}
+
+/* Footer */
+.footer {
+    background-color: #2C3E50; /* Fondo del pie de página */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #BDC3C7; /* Color de los enlaces en el pie de página */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #ECF0F1;
+}
+
+/* Animación de aparición */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.appear {
+    opacity: 1;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.appear-on-scroll {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.photo-container {
+    position: relative;
+    background: #ffffff;
+    /* White background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ .professional-details {
+     background: #f8f9fa;
+     /* Light grey background */
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+.text-primary {
+    color: #8f5442;
+}
+
+.btn-outline-primary {
+    border-color: #8f5442;
+    color: #8f5442;
+}
+
+.btn-outline-primary:hover {
+    background-color: #8f5442;
+    color: #fff;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #8f5442;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background: #8f5442;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #fff;
+    top: 0;
+}
+
+.timeline-content {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-title {
+    font-weight: bold;
+    color: #8f5442;
+    margin-bottom: 0.5rem;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}

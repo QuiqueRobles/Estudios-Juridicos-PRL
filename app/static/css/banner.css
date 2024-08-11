@@ -203,3 +203,24 @@
          height: auto;
      }
  }
+
+ /* Video Background Styling */
+ .video-background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 0;
+     filter: brightness(2);
+ }
+
+
+
+ .hero {
+     z-index: 2;
+     /* Ensure it's above both the video and neon lines */
+ }
+
+ /* Rest of the styling remains the same... */

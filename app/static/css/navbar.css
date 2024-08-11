@@ -1,35 +1,47 @@
 /* Navbar Styling */
 .navbar {
-    background-color: #111;
-    /* Fondo oscuro */
-    border-bottom: 2px solid #444;
-    /* Línea inferior para separación */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    /* Sombra suave para mayor profundidad */
-    transition: background-color 0.3s ease;
-    /* Transición suave al cambiar el fondo */
+    position:absolute;
+    background-color: black;
+    /* Initial transparent background */
+    border-bottom: 2px solid transparent;
+    /* Transparent bottom border */
+    box-shadow: none;
+    /* No initial shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+    z-index: 1000;
+    /* Remove sticky behavior by not using 'position: fixed' */
 }
+
+.navbar.scrolled {
+    background-color: #000;
+    /* Solid black background on scroll */
+    border-bottom: 2px solid #444;
+    /* Dark bottom border for separation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+    /* More pronounced shadow on scroll */
+}
+
 .navbar-logo {
     max-height: 40px;
-    /* Adjust according to your design */
     width: auto;
 }
 
-.navbar-brand span {
-    margin-left: 10px;
-    /* Space between logo and text */
-}
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #fff !important;
     text-transform: uppercase;
+    letter-spacing: 2px;
     transition: color 0.3s ease;
+    text-decoration: none;
+    /* No underlining */
 }
 
 .navbar-brand:hover {
-    color: #ccc !important;
-    /* Cambio de color suave al pasar el cursor */
+    color: #f0f0f0 !important;
+    text-decoration: none;
+    /* Maintain no underline on hover */
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -43,7 +55,6 @@
 .navbar-nav .nav-item .nav-link:hover {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo semitransparente en hover */
     border-radius: 5px;
 }
 
@@ -58,22 +69,22 @@
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2888, 88, 88, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(88, 88, 88, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .navbar-collapse {
     justify-content: flex-end;
 }
 
-/* Responsive: Navbar Background on Scroll */
+/* Mobile Navbar Background */
 @media (max-width: 768px) {
     .navbar {
         background-color: #000;
-        /* Fondo más oscuro en móviles */
+        /* Dark background on mobile */
     }
 }
 
-/* Smooth Scroll Effect for Navbar Links */
+/* Smooth Scroll for Navbar Links */
 html {
     scroll-behavior: smooth;
 }

@@ -22,8 +22,9 @@
         <div class="container d-flex align-items-center">
             <a href="{{ url_for('index') }}" class="d-flex align-items-center">
                 <img src="{{ url_for('static', filename='img/favicon.jpeg') }}" alt="Logo" class="navbar-logo">
+                </a>
                 <span class="navbar-brand font-weight-bold ml-2">PRL Estudio Jurídico</span>
-            </a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,6 +47,7 @@
             </div>
         </div>
     </nav>
+
 
 
     {% block content %}{% endblock %}
@@ -96,6 +98,18 @@
             // Trigger the scroll event on page load to check the initial position
             $(window).trigger('scroll');
         });
+        /* JavaScript for adding 'scrolled' class on scroll */
+            window.onscroll = function () {
+                const navbar = document.querySelector('.navbar');
+
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                }
+
+                else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
     </script>
 
 </body>

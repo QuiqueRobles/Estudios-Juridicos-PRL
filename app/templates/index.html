@@ -4,8 +4,14 @@
 
 {% block content %}
 
-<!-- Hero Section with Full-Width Background Image -->
-<header class="wrapper" style="background-image: url('{{ url_for('static', filename='img/banner-bg.jpg') }}'); background-size: cover; background-position: center;">
+<!-- Hero Section with Full-Width Background Video -->
+<header class="wrapper">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="{{ url_for('static', filename='img/herobannervideo.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="neon-lines"></div>
     <div class="hero">
         <div class="hero-content">
@@ -34,43 +40,51 @@
     </div>
 </header>
 
+
 <!-- Main Content with Equal Height Columns -->
 <div class="container my-5">
     <div class="row">
         <!-- Professional Overview Section -->
         <div class="col-12">
             <div class="row">
-                <!-- Professional Photo Section -->
-                <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                    <div class="photo-container position-relative">
-                        <img src="{{ url_for('static', filename='img/pedro-robles.png') }}" alt="Pedro Robles Latorre"
-                            class="img-fluid rounded-circle shadow-lg" style="width: 250px; height: 250px; object-fit: cover;">
-                        <div class="photo-overlay">Pedro Robles Latorre</div>
-                    </div>
-                </div>
-        
-                <!-- Professional Details Section -->
-                <div class="col-md-6 d-flex align-items-center">
-                    <div class="professional-details">
-                        <h2 class="display-4 font-weight-bold text-primary">Pedro Robles Latorre</h2>
-                        <p class="text-muted">Consultor Jurídico desde 2023</p>
-                        <p><i class="fas fa-map-marker-alt text-primary"></i> Madrid</p>
-                        <p>Colegiado n.º 15906 del Ilustre Colegio de Abogados de Valencia</p>
-                        <p><a href="tel:+34915860646" class="text-primary"><i class="fas fa-phone"></i> +34 915 860 646</a></p>
-                        <p><a href="mailto:pedro.robles@juridico.com" class="text-primary"><i class="fas fa-envelope"></i>
-                                pedro.robles@juridico.com</a></p>
-                        <a href="{{ url_for('static', filename='docs/cv_pedro_robles.pdf') }}"
-                            class="btn btn-outline-primary my-3"><i class="fas fa-file-pdf"></i> Descargar CV (PDF)</a>
-                        <div class="mt-4">
-                            <h4 class="font-weight-bold text-primary">Principales Áreas de Práctica</h4>
-                            <p class="mb-2">Herencias y Sucesiones</p>
-                            <h4 class="font-weight-bold text-primary">Idiomas</h4>
-                            <p class="mb-0">Español, Inglés</p>
+                <!-- Professional Overview Card -->
+                <div class="col-md-10 d-flex align-items-center justify-content-center">
+                    <div class="overview-card d-flex flex-column flex-md-row align-items-center">
+                        <!-- Professional Photo -->
+                        <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                            <div class="photo-container">
+                                <img src="{{ url_for('static', filename='img/pedro-robles.png') }}" alt="Pedro Robles Latorre">
+                                <div class="photo-overlay">Pedro Robles Latorre</div>
+                            </div>
                         </div>
+        
+                        <!-- Professional Details -->
+                        <div class="col-md-8 d-flex align-items-center">
+                            <div class="details-container ml-md-4 mt-3 mt-md-0">
+                                <h2 class="display-4 font-weight-bold ">Pedro Robles Latorre</h2>
+                                <p class="text-muted">Consultor Jurídico desde 2023</p>
+                                <p><i class="fas fa-map-marker-alt "></i> Madrid</p>
+                                <p>Colegiado n.º 15906 del Ilustre Colegio de Abogados de Valencia</p>
+                                <p><a href="tel:+34915860646" class="text-primary"><i class="fas fa-phone"></i> +34 915 860 646</a></p>
+                                <p><a href="mailto:pedro.robles@juridico.com" class="text-primary"><i class="fas fa-envelope"></i>
+                                        pedro.robles@juridico.com</a></p>
+                                <a href="{{ url_for('static', filename='docs/cv_pedro_robles.pdf') }}" class="btn btn-outline-primary my-3"><i
+                                        class="fas fa-file-pdf"></i> Descargar CV (PDF)</a>
+                                <div class="mt-4">
+                                    <h4 class="font-weight-bold ">Principales Áreas de Práctica</h4>
+                                    <p class="mb-2">Herencias y Sucesiones</p>
+                                    <h4 class="font-weight-bold ">Idiomas</h4>
+                                    <p class="mb-0">Español, Inglés</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
+
 
         
             <!-- Professional Timeline Section -->
@@ -111,37 +125,105 @@
                 </div>
             </div>
             <!-- Sobre mí -->
-            <div id="sobre-mi" class="my-5 appear-on-scroll">
-                <h2>Sobre mí</h2>
-                <p>Hola, soy Pedro Robles Latorre, consultor jurídico especializado en herencias y sucesiones con una
-                    sólida
-                    trayectoria en el ámbito legal. Con una formación académica en Derecho y una extensa experiencia en
-                    el sector,
-                    me dedico a brindar asesoramiento y soluciones efectivas para la gestión y resolución de temas
-                    relacionados con
-                    la herencia.</p>
-
-                <p>Mi carrera profesional comenzó en 2010 tras obtener mi licenciatura en Derecho en la Universidad de
-                    Valencia.
-                    Desde entonces, he trabajado en diversos bufetes de abogados y he colaborado en casos complejos de
-                    sucesión y
-                    partición de bienes. En 2023, decidí fundar PRL Estudio Jurídico para ofrecer un servicio más
-                    personalizado y
-                    especializado a mis clientes.</p>
-
-                <p>A lo largo de mi carrera, he gestionado con éxito numerosos casos de herencias, incluyendo la
-                    resolución de
-                    conflictos familiares, la planificación sucesoria y la administración de patrimonios. Mi enfoque
-                    está en ofrecer
-                    un asesoramiento claro y detallado, garantizando que cada cliente reciba una solución adaptada a sus
-                    necesidades
-                    y circunstancias particulares.</p>
-
-                <p>En mi tiempo libre, me gusta estar al tanto de las últimas novedades en el ámbito legal y participar
-                    en
-                    seminarios y conferencias relacionadas con el derecho de sucesiones. Mi objetivo es seguir creciendo
-                    profesionalmente y proporcionar un servicio de la más alta calidad a cada uno de mis clientes.</p>
+            <div id="sobre-mi" class="my-5 appear-on-scroll container">
+                <!-- Sección de Encabezado -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="display-4 font-weight-bold mb-4 text-dark">Sobre mí</h2>
+                        <hr class="my-4 w-50 mx-auto">
+                    </div>
+                </div>
+            
+                <!-- Tarjeta de Presentación con Imagen -->
+                <div class="row mb-5 align-items-center">
+                    <div class="col-md-3 text-center">
+                        <img src="/static/img/pedro-robles.png" alt="Pedro Robles Latorre" class="img-fluid rounded-circle shadow-lg mb-4 img-sm">
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="font-weight-bold text-dark">Pedro Robles Latorre</h3>
+                        <h5 class="text-muted">Catedrático de Derecho Civil y Consultor Jurídico</h5>
+                        <p class="text-justify mt-3 text-dark">Soy un catedrático de Derecho Civil con una vasta experiencia en la
+                            enseñanza y la consultoría jurídica. He dedicado mi carrera a la formación de futuros juristas, así como
+                            a la investigación y redacción de artículos académicos clave en el ámbito del derecho de sucesiones. Mi
+                            trato cercano y enfoque pedagógico han marcado la diferencia en la vida de mis alumnos y clientes.</p>
+                    </div>
+                </div>
+            
+                <!-- Sección de Logros Académicos y Profesionales -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h4 class="font-weight-bold mb-4 text-center text-dark">Logros y Experiencia Internacional</h4>
+                        <div class="row text-center">
+                            <!-- Tarjeta 1: Experiencia Internacional -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <i class="fas fa-globe-europe fa-3x" style="color:#8f5442"></i>
+                                        </div>
+                                        <h5 class="card-title font-weight-bold text-dark">Experiencia Internacional</h5>
+                                        <p class="card-text text-dark">He impartido clases y conferencias en prestigiosas
+                                            universidades de Europa, América Latina y Asia, compartiendo conocimientos y aprendiendo
+                                            de diversas culturas jurídicas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tarjeta 2: Publicaciones -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <i class="fas fa-book-open fa-3x " style="color:#8f5442"></i>
+                                        </div>
+                                        <h5 class="card-title font-weight-bold text-dark">Publicaciones Académicas</h5>
+                                        <p class="card-text text-dark">Autor de más de 50 artículos y varios libros sobre derecho
+                                            civil, muchos de los cuales son referencias en la materia y han sido citados en
+                                            múltiples jurisdicciones.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tarjeta 3: Trato Personalizado -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card shadow-sm h-100 border-0">
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <i class="fas fa-handshake fa-3x" style="color:#8f5442"></i>
+                                        </div>
+                                        <h5 class="card-title font-weight-bold text-dark">Trato Personalizado</h5>
+                                        <p class="card-text text-dark">Conocido por mi enfoque accesible y cercano, siempre me
+                                            esfuerzo por ofrecer una experiencia de aprendizaje enriquecedora y un asesoramiento
+                                            jurídico adaptado a las necesidades individuales.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Sección de Citas Destacadas -->
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <h4 class="font-weight-bold mb-4 text-center text-dark">Citas Destacadas</h4>
+                        <div class="row text-center">
+                            <div class="col-md-6 mb-3">
+                                <blockquote class="blockquote shadow-sm p-4 bg-white">
+                                    <p class="mb-0 text-dark">"El derecho de sucesiones no solo es una cuestión jurídica, sino
+                                        también un tema profundamente humano que requiere empatía y comprensión."</p>
+                                    <footer class="blockquote-footer mt-3 text-muted">Pedro Robles Latorre</footer>
+                                </blockquote>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <blockquote class="blockquote shadow-sm p-4 bg-white">
+                                    <p class="mb-0 text-dark">"Enseñar es un privilegio; es una oportunidad para dejar una huella
+                                        duradera en la vida de otros."</p>
+                                    <footer class="blockquote-footer mt-3 text-muted">Pedro Robles Latorre</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
 
             <!-- Updated Services Section -->
             <div id="servicios" class="my-5 appear-on-scroll">
@@ -157,8 +239,8 @@
                     <!-- Card 1: Herencias -->
                     <div class="col-md-6">
                         <div class="card interactive-card">
-                            <img src="{{ url_for('static', filename='img/herencias.jpg') }}" class="card-img-top"
-                                alt="Servicios de Herencias">
+                            <img src="{{ url_for('static', filename='img/patrimony.png') }}" class="card-img-top"
+                                alt="Servicios de Herencias" style="width:450px">
                             <div class="card-body">
                                 <h3 class="card-title">Asesoramiento en Herencias</h3>
                                 <p class="card-text">Ofrecemos asesoramiento experto en la planificación y gestión de
@@ -173,8 +255,8 @@
                     <!-- Card 2: Particiones -->
                     <div class="col-md-6">
                         <div class="card interactive-card">
-                            <img src="" class="card-img-top"
-                                alt="Servicios de Particiones">
+                            <img src="{{ url_for('static', filename='img/lawicon.png') }}" class="card-img-top"
+                                alt="Servicios de Particiones" style="width:450px">
                             <div class="card-body">
                                 <h3 class="card-title">Gestión de Particiones</h3>
                                 <p class="card-text">Gestionamos el proceso de partición de bienes, asegurando una
@@ -187,10 +269,96 @@
                 </div>
             </div>
 
-            <div id="contacto" class="my-5 appear-on-scroll">
-                <h2>Contacto</h2>
-                <p>Formulario de contacto o información adicional...</p>
+            <div id="contacto" class="my-5 appear-on-scroll container">
+                <!-- Sección de Encabezado -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="display-4 font-weight-bold mb-4 text-dark">Contacto</h2>
+                        <hr class="my-4 w-50 mx-auto">
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Redes Sociales -->
+                    <div class="col-12 mb-5 text-center">
+                        <h4 class="font-weight-bold text-dark">Conéctate Conmigo</h4>
+                        <p class="text-dark mb-4">Sígueme en redes sociales para estar al tanto de las últimas novedades y
+                            artículos:</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="https://linkedin.com/in/pedrorobles" class="btn btn-social btn-lg mr-3" target="_blank"
+                                title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://twitter.com/pedrorobles" class="btn btn-social btn-lg mr-3" target="_blank"
+                                title="Twitter">
+                                <i class="fab fa-twitter"></i> Twitter
+                            </a>
+                            <a href="https://facebook.com/pedrorobles" class="btn btn-social btn-lg mr-3" target="_blank"
+                                title="Facebook">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://instagram.com/pedrorobles" class="btn btn-social btn-lg" target="_blank"
+                                title="Instagram">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <!-- Información de Contacto -->
+                    <div class="col-md-6 mb-5">
+                        <h4 class="font-weight-bold text-dark">Información de Contacto</h4>
+                        <p class="text-dark">Puedes ponerte en contacto conmigo a través de cualquiera de los siguientes medios:</p>
+                        <ul class="list-unstyled text-dark">
+                            <li class="mb-2">
+                                <i class="fas fa-phone-alt text-primary"></i> Teléfono: <a href="tel:+34912345678"
+                                    class="text-dark">+34 912 345 678</a>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-mobile-alt text-primary"></i> Móvil: <a href="tel:+34678901234"
+                                    class="text-dark">+34 678 901 234</a>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-envelope text-primary"></i> Email: <a href="mailto:contacto@prljuridico.com"
+                                    class="text-dark">contacto@prljuridico.com</a>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-map-marker-alt text-primary"></i> Dirección: Calle Ficticia, 123, 28001 Madrid,
+                                España
+                            </li>
+                        </ul>
+                    </div>
+            
+                    <!-- Formulario de Contacto -->
+                    <div class="col-md-6">
+                        <h4 class="font-weight-bold text-dark">Envíame un Mensaje</h4>
+                        <form action="#" method="post" class="mt-4">
+                            <div class="form-group">
+                                <label for="nombre" class="text-dark">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="text-dark">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electrónico"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto" class="text-dark">Asunto</label>
+                                <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Motivo del contacto"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje" class="text-dark">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 </div>

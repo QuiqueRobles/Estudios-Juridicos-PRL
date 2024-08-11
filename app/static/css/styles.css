@@ -108,26 +108,46 @@ body {
 }
 .photo-container {
     position: relative;
-    background: #ffffff;
-    /* White background for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    /* Adjust width as needed */
+    height: 400px;
+    /* Increased height for a more prominent vertical appearance */
+    overflow: hidden;
+    border-radius: 15px;
+    /* Rounded corners */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0.7) 100%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Photo */
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Overlay */
 .photo-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    /* Slightly darker background for contrast */
+    color: #ffffff;
     text-align: center;
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Hover Effect for Image */
+.photo-container:hover img {
+    opacity: 0.9;
+    /* Slight opacity change on hover */
 }
  .professional-details {
      background: #f8f9fa;
@@ -208,3 +228,87 @@ body {
 .font-weight-bold {
     font-weight: 700;
 }
+
+ .card-body i {
+     color: #007bff;
+     /* Color de iconos */
+ }
+
+ .card {
+     background-color: #f8f9fa;
+     /* Fondo de tarjetas ligeramente más claro */
+ }
+
+ .blockquote {
+     background-color: #ffffff;
+     /* Fondo blanco para citas */
+     border-left: 5px solid #8f5442;
+     /* Borde izquierdo azul para citas */
+     border-radius: 5px;
+     color: #343a40;
+     /* Color del texto de las citas */
+ }
+
+ .blockquote-footer {
+     color: #6c757d;
+     /* Color del autor de la cita */
+ }
+
+ .card-title {
+     color: #343a40;
+     /* Color de títulos de tarjetas */
+ }
+
+ .card-text {
+     color: #495057;
+     /* Texto de las tarjetas */
+ }
+  .btn-social {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      background-color: #8f5442;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+  }
+
+  .btn-social i {
+      margin-right: 8px;
+      font-size: 1.5rem;
+  }
+
+  .btn-social:hover {
+      background-color: #744233;
+      text-decoration: none;
+      color: #fff;
+  }
+
+  .form-control {
+      border-radius: 0.25rem;
+      border: 1px solid #ced4da;
+      padding: 0.75rem 1.25rem;
+  }
+
+  .btn-primary {
+      background-color: #8f5442;
+      border-color: #8f5442;
+  }
+
+  .btn-primary:hover {
+      background-color: #0056b3;
+  }
+
+  .appear-on-scroll {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+  }
+
+  .appear-on-scroll.is-visible {
+      opacity: 1;
+  }

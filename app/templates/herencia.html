@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Asesoramiento en Herencias{% endblock %}
+
+{% block content %}
+
+<!-- Page Header -->
+<header class="wrapper">
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="h1--scalingSize" data-text="Asesoramiento en Herencias"
+                style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);">Asesoramiento en Herencias</h1>
+            <p class="lead">Déjanos ayudarte a resolver tus dudas y problemas legales relacionados con herencias.</p>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container my-5">
+    <h2 class="text-center">Formulario de Asesoramiento en Herencias</h2>
+    <p class="text-center">Por favor, completa el siguiente formulario con tus datos y una descripción del problema que
+        estás enfrentando. Nos pondremos en contacto contigo lo antes posible.</p>
+
+    <!-- Herencias Form -->
+    <form action="{{ url_for('herencias_form_submit') }}" method="post" class="mt-4">
+        <div class="form-group">
+            <label for="nombre" class="text-dark">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="text-dark">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electrónico"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="telefono" class="text-dark">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Tu número de teléfono"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="asunto" class="text-dark">Asunto</label>
+            <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Motivo del asesoramiento"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje" class="text-dark">Descripción del Problema</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="5"
+                placeholder="Describe aquí el problema que necesitas resolver..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar Solicitud</button>
+    </form>
+</div>
+
+{% endblock %}

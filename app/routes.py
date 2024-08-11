@@ -1,6 +1,5 @@
-from flask import render_template, request, flash, redirect, url_for
-from app import app
-from app.forms import ConsultaForm, ContactForm
+from flask import render_template, request, flash, redirect, url_for, current_app as app
+from .forms import ConsultaForm, ContactForm
 
 @app.route('/')
 def index():
